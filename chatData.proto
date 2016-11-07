@@ -1,0 +1,34 @@
+package chatData;
+
+message MSG{
+	required string chatid = 1;
+	required int32 userid = 3;
+	optional string name = 2;
+	optional string host = 4;
+	message MsgData{
+		required string SendTime = 1;
+		optional string data = 2;
+	}
+	repeated MsgData data = 5;
+}
+
+message CMD{
+	enum Command{
+		LOGIN = 0;
+		CREATE = 1;
+		CLOSE = 2;
+		ENTER = 3;
+		QUIT = 4;
+		REGISTER = 5;
+	}
+	required Command cmd = 2;
+	optional string chatid = 3;
+	optional int32 userid = 1;
+	message CmdData{
+		optional string login = 1;
+		optional string pswd = 2;
+		optional string name = 3;
+		optional string args = 4;
+	}
+	optional CmdData data =4;
+}
