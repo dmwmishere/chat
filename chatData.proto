@@ -1,15 +1,15 @@
 package chatData;
 
-message MSG{
+message CHAT{
 	required string chatid = 1;
-	required int32 userid = 3;
 	optional string name = 2;
-	optional string host = 4;
+	optional int32 priority = 5 [default = 0];
+	optional bytes file = 6;
 	message MsgData{
 		required string SendTime = 1;
 		optional string data = 2;
 	}
-	repeated MsgData data = 5;
+	repeated MsgData data = 7;
 }
 
 message CMD{
@@ -23,7 +23,6 @@ message CMD{
 	}
 	required Command cmd = 2;
 	optional string chatid = 3;
-	optional int32 userid = 1;
 	message CmdData{
 		optional string login = 1;
 		optional string pswd = 2;
@@ -31,4 +30,13 @@ message CMD{
 		optional string args = 4;
 	}
 	optional CmdData data =4;
+}
+
+message MSG{
+	optional int32 userid = 1;
+	optional string host = 2;
+	oneof msg_type{
+		CHAT chat = 3;
+		CMD cmd = 4;
+	}
 }
