@@ -19,15 +19,15 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='chatData.proto',
   package='chatData',
   syntax='proto2',
-  serialized_pb=_b('\n\x0e\x63hatData.proto\x12\x08\x63hatData\"\x98\x01\n\x04\x43HAT\x12\x0e\n\x06\x63hatid\x18\x01 \x02(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x13\n\x08priority\x18\x05 \x01(\x05:\x01\x30\x12\x0c\n\x04\x66ile\x18\x06 \x01(\x0c\x12$\n\x04\x64\x61ta\x18\x07 \x03(\x0b\x32\x16.chatData.CHAT.MsgData\x1a)\n\x07MsgData\x12\x10\n\x08SendTime\x18\x01 \x02(\t\x12\x0c\n\x04\x64\x61ta\x18\x02 \x01(\t\"\xf2\x01\n\x03\x43MD\x12\"\n\x03\x63md\x18\x02 \x02(\x0e\x32\x15.chatData.CMD.Command\x12\x0e\n\x06\x63hatid\x18\x03 \x01(\t\x12#\n\x04\x64\x61ta\x18\x04 \x01(\x0b\x32\x15.chatData.CMD.CmdData\x1a\x42\n\x07\x43mdData\x12\r\n\x05login\x18\x01 \x01(\t\x12\x0c\n\x04pswd\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x0c\n\x04\x61rgs\x18\x04 \x01(\t\"N\n\x07\x43ommand\x12\t\n\x05LOGIN\x10\x00\x12\n\n\x06\x43REATE\x10\x01\x12\t\n\x05\x43LOSE\x10\x02\x12\t\n\x05\x45NTER\x10\x03\x12\x08\n\x04QUIT\x10\x04\x12\x0c\n\x08REGISTER\x10\x05\"m\n\x03MSG\x12\x0e\n\x06userid\x18\x01 \x01(\x05\x12\x0c\n\x04host\x18\x02 \x01(\t\x12\x1e\n\x04\x63hat\x18\x03 \x01(\x0b\x32\x0e.chatData.CHATH\x00\x12\x1c\n\x03\x63md\x18\x04 \x01(\x0b\x32\r.chatData.CMDH\x00\x42\n\n\x08msg_type')
+  serialized_pb=_b('\n\x0e\x63hatData.proto\x12\x08\x63hatData\"\x98\x01\n\x04\x43HAT\x12\x0e\n\x06\x63hatid\x18\x01 \x02(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x13\n\x08priority\x18\x05 \x01(\x05:\x01\x30\x12\x0c\n\x04\x66ile\x18\x06 \x01(\x0c\x12$\n\x04\x64\x61ta\x18\x07 \x03(\x0b\x32\x16.chatData.CHAT.MsgData\x1a)\n\x07MsgData\x12\x10\n\x08SendTime\x18\x01 \x02(\t\x12\x0c\n\x04\x64\x61ta\x18\x02 \x01(\t\"\xfb\x01\n\x03\x43MD\x12\'\n\x04\x63ode\x18\x02 \x02(\x0e\x32\x19.chatData.CMD.CommandCode\x12\x0e\n\x06\x63hatid\x18\x03 \x01(\t\x12#\n\x04\x64\x61ta\x18\x04 \x01(\x0b\x32\x15.chatData.CMD.CmdData\x1a\x42\n\x07\x43mdData\x12\r\n\x05login\x18\x01 \x01(\t\x12\x0c\n\x04pswd\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x0c\n\x04\x61rgs\x18\x04 \x01(\t\"R\n\x0b\x43ommandCode\x12\t\n\x05LOGIN\x10\x00\x12\n\n\x06\x43REATE\x10\x01\x12\t\n\x05\x43LOSE\x10\x02\x12\t\n\x05\x45NTER\x10\x03\x12\x08\n\x04QUIT\x10\x04\x12\x0c\n\x08REGISTER\x10\x05\"m\n\x03MSG\x12\x0e\n\x06userid\x18\x01 \x01(\x05\x12\x0c\n\x04host\x18\x02 \x01(\t\x12\x1e\n\x04\x63hat\x18\x03 \x01(\x0b\x32\x0e.chatData.CHATH\x00\x12\x1c\n\x03\x63md\x18\x04 \x01(\x0b\x32\r.chatData.CMDH\x00\x42\n\n\x08msg_type\"\xb4\x01\n\x04RSPS\x12+\n\rresponse_code\x18\x01 \x02(\x0e\x32\x14.chatData.RSPS.Codes\x12\x0f\n\x07message\x18\x02 \x01(\t\"n\n\x05\x43odes\x12\x0b\n\x07SUCCESS\x10\x00\x12\x11\n\rDELIVERY_FAIL\x10\x01\x12\x0e\n\nPARSE_FAIL\x10\x02\x12\x10\n\x0cSERVER_ERROR\x10\x03\x12\x13\n\x0f\x43HAT_NOT_EXISTS\x10\x04\x12\x0e\n\nLOGIN_FAIL\x10\x05')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
-_CMD_COMMAND = _descriptor.EnumDescriptor(
-  name='Command',
-  full_name='chatData.CMD.Command',
+_CMD_COMMANDCODE = _descriptor.EnumDescriptor(
+  name='CommandCode',
+  full_name='chatData.CMD.CommandCode',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -58,10 +58,48 @@ _CMD_COMMAND = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=348,
-  serialized_end=426,
+  serialized_start=353,
+  serialized_end=435,
 )
-_sym_db.RegisterEnumDescriptor(_CMD_COMMAND)
+_sym_db.RegisterEnumDescriptor(_CMD_COMMANDCODE)
+
+_RSPS_CODES = _descriptor.EnumDescriptor(
+  name='Codes',
+  full_name='chatData.RSPS.Codes',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='SUCCESS', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='DELIVERY_FAIL', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='PARSE_FAIL', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SERVER_ERROR', index=3, number=3,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CHAT_NOT_EXISTS', index=4, number=4,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='LOGIN_FAIL', index=5, number=5,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=619,
+  serialized_end=729,
+)
+_sym_db.RegisterEnumDescriptor(_RSPS_CODES)
 
 
 _CHAT_MSGDATA = _descriptor.Descriptor(
@@ -207,8 +245,8 @@ _CMD_CMDDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=280,
-  serialized_end=346,
+  serialized_start=285,
+  serialized_end=351,
 )
 
 _CMD = _descriptor.Descriptor(
@@ -219,7 +257,7 @@ _CMD = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='cmd', full_name='chatData.CMD.cmd', index=0,
+      name='code', full_name='chatData.CMD.code', index=0,
       number=2, type=14, cpp_type=8, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -244,7 +282,7 @@ _CMD = _descriptor.Descriptor(
   ],
   nested_types=[_CMD_CMDDATA, ],
   enum_types=[
-    _CMD_COMMAND,
+    _CMD_COMMANDCODE,
   ],
   options=None,
   is_extendable=False,
@@ -253,7 +291,7 @@ _CMD = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=184,
-  serialized_end=426,
+  serialized_end=435,
 )
 
 
@@ -307,16 +345,55 @@ _MSG = _descriptor.Descriptor(
       name='msg_type', full_name='chatData.MSG.msg_type',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=428,
-  serialized_end=537,
+  serialized_start=437,
+  serialized_end=546,
+)
+
+
+_RSPS = _descriptor.Descriptor(
+  name='RSPS',
+  full_name='chatData.RSPS',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='response_code', full_name='chatData.RSPS.response_code', index=0,
+      number=1, type=14, cpp_type=8, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='message', full_name='chatData.RSPS.message', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _RSPS_CODES,
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=549,
+  serialized_end=729,
 )
 
 _CHAT_MSGDATA.containing_type = _CHAT
 _CHAT.fields_by_name['data'].message_type = _CHAT_MSGDATA
 _CMD_CMDDATA.containing_type = _CMD
-_CMD.fields_by_name['cmd'].enum_type = _CMD_COMMAND
+_CMD.fields_by_name['code'].enum_type = _CMD_COMMANDCODE
 _CMD.fields_by_name['data'].message_type = _CMD_CMDDATA
-_CMD_COMMAND.containing_type = _CMD
+_CMD_COMMANDCODE.containing_type = _CMD
 _MSG.fields_by_name['chat'].message_type = _CHAT
 _MSG.fields_by_name['cmd'].message_type = _CMD
 _MSG.oneofs_by_name['msg_type'].fields.append(
@@ -325,9 +402,12 @@ _MSG.fields_by_name['chat'].containing_oneof = _MSG.oneofs_by_name['msg_type']
 _MSG.oneofs_by_name['msg_type'].fields.append(
   _MSG.fields_by_name['cmd'])
 _MSG.fields_by_name['cmd'].containing_oneof = _MSG.oneofs_by_name['msg_type']
+_RSPS.fields_by_name['response_code'].enum_type = _RSPS_CODES
+_RSPS_CODES.containing_type = _RSPS
 DESCRIPTOR.message_types_by_name['CHAT'] = _CHAT
 DESCRIPTOR.message_types_by_name['CMD'] = _CMD
 DESCRIPTOR.message_types_by_name['MSG'] = _MSG
+DESCRIPTOR.message_types_by_name['RSPS'] = _RSPS
 
 CHAT = _reflection.GeneratedProtocolMessageType('CHAT', (_message.Message,), dict(
 
@@ -365,6 +445,13 @@ MSG = _reflection.GeneratedProtocolMessageType('MSG', (_message.Message,), dict(
   # @@protoc_insertion_point(class_scope:chatData.MSG)
   ))
 _sym_db.RegisterMessage(MSG)
+
+RSPS = _reflection.GeneratedProtocolMessageType('RSPS', (_message.Message,), dict(
+  DESCRIPTOR = _RSPS,
+  __module__ = 'chatData_pb2'
+  # @@protoc_insertion_point(class_scope:chatData.RSPS)
+  ))
+_sym_db.RegisterMessage(RSPS)
 
 
 # @@protoc_insertion_point(module_scope)

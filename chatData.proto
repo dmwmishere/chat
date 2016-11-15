@@ -1,3 +1,4 @@
+syntax = "proto2";
 package chatData;
 
 message CHAT{
@@ -13,7 +14,7 @@ message CHAT{
 }
 
 message CMD{
-	enum Command{
+	enum CommandCode{
 		LOGIN = 0;
 		CREATE = 1;
 		CLOSE = 2;
@@ -21,7 +22,7 @@ message CMD{
 		QUIT = 4;
 		REGISTER = 5;
 	}
-	required Command cmd = 2;
+	required CommandCode code = 2;
 	optional string chatid = 3;
 	message CmdData{
 		optional string login = 1;
@@ -39,4 +40,17 @@ message MSG{
 		CHAT chat = 3;
 		CMD cmd = 4;
 	}
+}
+
+message RSPS{
+	enum Codes{
+		SUCCESS = 0;
+		DELIVERY_FAIL = 1;
+		PARSE_FAIL = 2;
+		SERVER_ERROR = 3;
+		CHAT_NOT_EXISTS = 4;
+		LOGIN_FAIL = 5;
+	}
+	required Codes response_code = 1;
+	optional string message = 2;
 }
